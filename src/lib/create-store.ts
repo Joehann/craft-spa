@@ -1,9 +1,9 @@
 import { AnyAction, configureStore, ThunkDispatch } from "@reduxjs/toolkit"
 import { AuthGateway } from "./auth/model/auth.gateway"
 import { TimelineGateway } from "./timelines/model/timeline.gateway"
-import { timelinesSlice } from "./timelines/slices/timelines.slice"
+import { reducer as timelinesReducer } from "./timelines/reducer"
 
-const rootReducer = timelinesSlice.reducer
+const rootReducer = timelinesReducer
 
 export const createStore = (dependencies: Dependencies) =>
   configureStore({
